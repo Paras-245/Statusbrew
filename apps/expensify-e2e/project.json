@@ -1,0 +1,10 @@
+{
+  "name": "expensify-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/expensify-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["expensify"],
+  "// targets": "to see all targets run: nx show project expensify-e2e --web",
+  "targets": {}
+}
