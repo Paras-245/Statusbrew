@@ -1,2 +1,22 @@
-<app-nx-welcome></app-nx-welcome>
-<router-outlet></router-outlet>
+<div class="app-container">
+  <!-- Navbar Section -->
+  <app-navbar></app-navbar>
+
+  <!-- Header Section -->
+  <header class="app-header">
+    <h1>Expense Tracker</h1>
+    <p class="subtitle">Manage your daily expenses effectively</p>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="app-main">
+    <div class="content-wrapper">
+      <app-expense-list></app-expense-list>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="app-footer">
+    <p>&copy; 2024 Expense Tracker. Designed with ❤️</p>
+  </footer>
+</div>

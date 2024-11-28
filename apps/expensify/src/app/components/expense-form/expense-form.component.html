@@ -1,0 +1,23 @@
+<div class="expense-form">
+  <form (ngSubmit)="onSubmit()">
+    <label for="title">Title:</label>
+    <input id="title" [(ngModel)]="expense.title" name="title" required />
+
+    <label for="amount">Amount:</label>
+    <input id="amount" type="number" [(ngModel)]="expense.amount" name="amount" required />
+
+    <label for="date">Date:</label>
+    <input id="date" type="date" [(ngModel)]="expense.date" name="date" required />
+
+    <label for="category">Category:</label>
+    <select id="category" [(ngModel)]="expense.category" name="category" required>
+      @for (category of categories;track categories.indexOf(category)){
+          <option value="{{category}}">
+            {{category}}
+          </option>
+        }
+    </select>
+
+    <button type="submit">Save</button>
+  </form>
+</div>

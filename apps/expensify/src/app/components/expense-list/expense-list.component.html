@@ -1,0 +1,44 @@
+<div class="expense-list">
+  <h2>Expense List</h2>
+
+  <!-- Loading and Error Messages -->
+  <div *ngIf="loading$ | async" class="loading">Loading...</div>
+  <div *ngIf="error$ | async as error" class="error">{{ error }}</div>
+
+  <!-- Add Expense Button -->
+  <button *ngIf="!selectedExpense" (click)="onAddExpense()" class="add-expense-button">
+    Add Expense
+  </button>
+
+  <!-- Expense Form (for Add or Edit) -->
+  <app-expense-form
+    *ngIf="selectedExpense"
+    [expense]="selectedExpense"
+    (formSubmit)="onFormSubmit()"
+  ></app-expense-form>
+
+  <!-- Expense List Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let expense of expenses$ | async">
+        <td>{{ expense.title }}</td>
+        <td>{{ expense.amount | currency }}</td>
+        <td>{{ expense.date | date }}</td>
+        <td>{{ expense.category }}</td>
+        <td>
+          <button (click)="onEditExpense(expense)">Edit</button>
+          <button (click)="onDeleteExpense(expense.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

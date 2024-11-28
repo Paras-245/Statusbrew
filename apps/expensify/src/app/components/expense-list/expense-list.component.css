@@ -1,0 +1,55 @@
+.expense-list {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .loading {
+    color: #ff9800;
+  }
+  
+  .error {
+    color: #f44336;
+  }
+  .add-expense-button {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .add-expense-button:hover {
+    background-color: #218838;
+  }
+  
